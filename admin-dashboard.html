@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🌾 Agriculture Admin
+        </div>
+
+        <div class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Admin Dashboard -->
+    <div class="dashboard-container">
+
+        <h1>Admin Dashboard</h1>
+
+        <p>
+            Welcome, Administrator!
+        </p>
+
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h2>🌱 Crops</h2>
+
+                <p id="cropCount">
+                    0
+                </p>
+
+                <button onclick="showCropSection()">
+                    Manage Crops
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>💡 Farming Tips</h2>
+
+                <p id="tipCount">
+                    0
+                </p>
+
+                <button onclick="showTipSection()">
+                    Manage Tips
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>👨‍🌾 Users</h2>
+
+                <p id="userCount">
+                    0
+                </p>
+
+                <button onclick="showUserSection()">
+                    View Users
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Crop Management -->
+        <section id="cropSection" class="admin-section">
+
+            <h2>🌱 Manage Crops</h2>
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="cropName"
+                    placeholder="Crop Name"
+                >
+
+                <input
+                    type="text"
+                    id="cropSeason"
+                    placeholder="Season"
+                >
+
+                <button onclick="addCrop()">
+                    Add Crop
+                </button>
+
+            </div>
+
+
+            <div id="cropList">
+
+                <!-- Crops will appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Farming Tips -->
+        <section id="tipSection" class="admin-section">
+
+            <h2>💡 Manage Farming Tips</h2>
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="tipInput"
+                    placeholder="Enter farming tip"
+                >
+
+                <button onclick="addTip()">
+                    Add Tip
+                </button>
+
+            </div>
+
+
+            <div id="tipList">
+
+                <!-- Tips will appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Users -->
+        <section id="userSection" class="admin-section">
+
+            <h2>👨‍🌾 Registered Users</h2>
+
+            <div id="userList">
+
+                <!-- Users will appear here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

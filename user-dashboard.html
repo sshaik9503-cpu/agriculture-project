@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🌾 Farmer Friendly
+        </div>
+
+        <div class="nav-links">
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- User Dashboard -->
+    <div class="dashboard-container">
+
+        <h1>🌾 Farmer Dashboard</h1>
+
+        <p id="welcomeUser">
+            Welcome Farmer!
+        </p>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchCrop"
+                placeholder="Search for a crop..."
+                onkeyup="searchCrops()"
+            >
+
+        </div>
+
+
+        <!-- Information Cards -->
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h2>🌱 Crop Information</h2>
+
+                <p>
+                    View information about different crops
+                    and their growing seasons.
+                </p>
+
+                <button onclick="displayUserCrops()">
+                    View Crops
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>💡 Farming Tips</h2>
+
+                <p>
+                    Get useful tips to improve farming
+                    practices.
+                </p>
+
+                <button onclick="displayUserTips()">
+                    View Tips
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>📈 Market Information</h2>
+
+                <p>
+                    View sample agricultural market
+                    information.
+                </p>
+
+                <button onclick="displayMarket()">
+                    View Market
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Results -->
+        <section class="user-section">
+
+            <h2>Information</h2>
+
+            <div id="userContent">
+
+                <p>
+                    Select an option above to view information.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
